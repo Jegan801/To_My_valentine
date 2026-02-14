@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine? ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="bodyEl">
+    <div id="starsLayer" class="stars-layer" aria-hidden="true"></div>
+    <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+    <div id="cursorTrail" class="cursor-trail" aria-hidden="true"></div>
+    <div id="cursorSparkles" class="cursor-sparkles" aria-hidden="true"></div>
+    <div id="heartParticles" class="heart-particles" aria-hidden="true"></div>
+    <div id="confettiContainer" class="confetti-container" aria-hidden="true"></div>
+    <div id="heartsBurstContainer" class="hearts-burst-container" aria-hidden="true"></div>
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Main Image Container -->
+            <div class="image-container">
+                <img id="mainImage" src="images/initial-photo.jpg" alt="Romantic Valentine's Day">
+            </div>
+
+            <!-- Main Text -->
+            <h1 class="main-text" id="mainText">Janani, Will you be my Valentine?</h1>
+
+            <!-- Teasing / Error Message (hidden initially) -->
+            <h2 class="error-message" id="errorMessage">Wrong answer, try again! ❤️</h2>
+
+            <!-- System Override (hidden initially) -->
+            <div class="system-override" id="systemOverride">
+                <p class="system-line" id="systemLine1">System checking compatibility...</p>
+                <div class="system-progress-wrap" aria-hidden="true">
+                    <div class="system-progress-bar" id="systemProgressBar"></div>
+                </div>
+                <p class="system-line" id="systemLine2">Compatibility: 100%</p>
+            </div>
+
+
+            <!-- Buttons Container (Hidden on final) -->
+            <div class="buttons-container" id="buttonsContainer">
+                <button class="btn btn-yes" id="yesButton">Yes</button>
+                <button class="btn btn-no" id="noButton">No</button>
+            </div>
+
+            <!-- Final Page Hub (Radial Menu) -->
+            <div id="finalHub" class="final-hub" aria-hidden="true">
+                <div class="central-bubble">
+                    I know you will say yes
+                </div>
+                <!-- Satellite Buttons -->
+                <div class="orbit-container">
+                    <button type="button" id="secretPoemBtn" class="satellite-btn" title="Read Poem">📜</button>
+                    <button type="button" id="secretGravityBtn" class="satellite-btn" title="Gravity">↓</button>
+                    <button type="button" id="secretMagneticBtn" class="satellite-btn" title="Magnetic">🧲</button>
+                    <button type="button" id="secretGlitchBtn" class="satellite-btn" title="Glitch">◇</button>
+                    <button type="button" id="secretSpotlightBtn" class="satellite-btn" title="Spotlight">🔦</button>
+                    <!-- Rain Removed -->
+                    <button type="button" id="secretHeartbeatBtn" class="satellite-btn" title="Heartbeat">💓</button>
+                    <button type="button" id="secretMelodyBtn" class="satellite-btn" title="Melody">🎹</button>
+                    <button type="button" id="secretUnlockHint" class="satellite-btn" title="Unlock">❤️</button>
+                </div>
+            </div>
+
+            <!-- Poem Modal (Initially Hidden) -->
+            <div id="poemModal" class="poem-modal" aria-hidden="true">
+                <div class="poem-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="poem-container">
+                        <div class="poem-title">I carry your heart with me(I carry it in)</div>
+                        <div class="poem-author">By E. E. Cummings</div>
+                        <div class="poem-body">
+                            I carry your heart with me(I carry it in<br>
+                            my heart)I am never without it(anywhere<br>
+                            I go you go,my dear;and whatever is done<br>
+                            by only me is your doing,my darling)<br>
+                            <span class="pl-4">I fear</span><br>
+                            no fate(for you are my fate,my sweet)I want<br>
+                            no world(for beautiful you are my world,my true)<br>
+                            and it’s you are whatever a moon has always meant<br>
+                            and whatever a sun will always sing is you<br>
+                            <br>
+                            here is the deepest secret nobody knows<br>
+                            (here is the root of the root and the bud of the bud<br>
+                            and the sky of the sky of a tree called life;which grows<br>
+                            higher than soul can hope or mind can hide)<br>
+                            and this is the wonder that's keeping the stars apart<br>
+                            <br>
+                            I carry your heart(I carry it in my heart)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loveTapPanel" class="love-tap-panel" aria-hidden="true">
+                <p class="love-tap-hint">Spell the secret message: </p>
+                <div class="love-tap-letters">
+                    <button type="button" class="love-tap-letter" data-letter="I">I</button>
+                    <button type="button" class="love-tap-letter" data-letter="L">L</button>
+                    <button type="button" class="love-tap-letter" data-letter="O">O</button>
+                    <button type="button" class="love-tap-letter" data-letter="V">V</button>
+                    <button type="button" class="love-tap-letter" data-letter="E">E</button>
+                    <button type="button" class="love-tap-letter" data-letter="Y">Y</button>
+                    <button type="button" class="love-tap-letter" data-letter="O">O</button>
+                    <button type="button" class="love-tap-letter" data-letter="U">U</button>
+                </div>
+            </div>
+
+            <!-- Spotlight Overlay -->
+            <div id="spotlightLayer" class="spotlight-layer" aria-hidden="true"></div>
+            <div id="spotlightMessage" class="spotlight-message">Even in the darkest times, you are my light</div>
+
+            <!-- Secret Easter Egg (keyboard: I L O V E Y O U — or mobile: tap I LOVE YOU) -->
+            <div id="secretEasterEgg" class="secret-easter-egg" aria-hidden="true">
+                <div class="secret-easter-egg-inner">
+                    <span class="secret-hearts" aria-hidden="true"></span>
+                    <p class="secret-message" id="secretMessage">I know you love me! 💕 I love you too! Forever yours.
+                        ❤️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gravity / Glitch messages outside content so they stay fixed on screen -->
+    <div id="gravityMessage" class="secret-overlay-message" aria-hidden="true">
+        <p>I am falling for you</p>
+    </div>
+    <div id="glitchMessage" class="secret-overlay-message" aria-hidden="true">
+        <p>Sorry… my heart skipped a beat.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
